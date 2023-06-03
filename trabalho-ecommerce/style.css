@@ -1,89 +1,243 @@
-html{
+@import url('https://fonts.googleapis.com/css2?family=Sua+Fonte&display=swap');
+
+html {
     height: 100%;
-}
-
-
-.navColor{
-    background-color: #F7EDF0;
-    color: white;
-}
-
-body, ul, li, p {
-
-    margin: 0px;
-    padding: 0px;
-    font-size: 1,2rem;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.makeupCarrossel {
-    margin-left: 800px; 
-}
-
-.makeupCarrosselMaior {
-    margin-left: 700px; 
-}
-
-
-.header a{
+  }
+  
+  .navColor {
+    background-color: #f7edf0;
+    color: #333;
+  }
+  
+  
+  body, ul, li, p {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+  
+  .carousel-item img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  .header a {
     text-decoration: none;
     color: white;
-}
-
-h1{
-    font-size: 140%;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #333;
+    margin: 30px auto;
     text-align: center;
-    font-weight: bold;
-}
-
-img{
+  }
+  
+  img {
     max-width: 100%;
-    display: block;
-}
-
-
-.menu{
+    height: auto;
+  }
+  
+  .navbar-nav {
     display: flex;
-}
-
-.menu li{
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
-    margin-left: 10px;
-}
+    padding: 0;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-left: 15px;
+  }
+  
+  .navbar-nav .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #d4c3d0;
+  }
+  
+  
+  .menu li {
+    margin-left: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f7edf0;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
 
-.newsletter{
-    width: 500px;
+  
+.menu li:hover {
+    background-color: #d4c3d0;
+    color: white;
+  }
+  
+  
+  .newsletter {
+    width: 100%;
     text-align: center;
     align-items: center;
-    margin-left: 700px;
     margin-bottom: 40px;
     margin-top: 20px;
-}
-
-
-
-
-
-.footer{
-    background-color: #F7EDF0;
+  }
+  
+  .footer {
+    background-color: #f7edf0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     color: black;
-}
-
-/* CSS Grod 1 * - Início */
-
-.grid{
+  }
+  
+  .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     grid-gap: 20px;
     max-width: 800px;
     margin: 0 auto;
     padding: 10px;
-}
+  }
+  
+  @media (min-width: 768px) {
+    .makeupCarrossel {
+      width: 300px;
+      height: 600px;
+    }
+  
+    .makeupCarrosselMaior {
+      width: 500px;
+      height: 600px;
+    }
+  
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      .card {
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .card-img-top {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      
+      .card-body {
+        padding: 1rem;
+        text-align: center;
+      }
+      
+      .card-text {
+        margin-bottom: 0;
+      }
+      
+      .newsletter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        margin-top: 20px;
+      }
+      
+      .newsletter label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;}
+      
+
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+
+      
+      
+.card-content {
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
 
 
+  .newsletter {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  
+  .newsletter-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  .newsletter-input {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .newsletter-submit {
+    background-color: #f7edf0;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter-submit:hover {
+    background-color: #d4c3d0;
+    color: white;
+  }
+  
+  
+    .newsletter {
+      width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
